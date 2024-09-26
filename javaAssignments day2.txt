@@ -1,0 +1,333 @@
+Assignment 1
+
+
+package AssignmentsDay1;
+import java.util.*;
+public class Task1 {
+  private String name;
+  private int age;
+  private double income;
+  
+  Scanner sc=new Scanner(System.in);
+  public void accept() {
+		System.out.println("Enter the Employee name:- ");
+		name=sc.next();
+		System.out.println("Enter the Employee age:- ");
+		age=sc.nextInt();
+		System.out.println("Enter Employee income:-");
+		income=sc.nextDouble();
+	}   
+  public void checkAge() {
+	  if (age>=18 && age<=60) {
+		  System.out.println("Accourding to your age you are eligible for the loan");
+	  }else
+		  System.out.println("Accourding to your age you are not eligible for loan");
+  }
+  public void checkIncome() {
+	  if (income>=250000 && income<=0) {
+		  System.out.println("Accourding to your income you are eligible for the loan");
+	  }else
+		  System.out.println("Accourding to your income you are not eligible for loan");
+  }
+  public void display() {
+	  System.out.println("Employee name is:-"+name);
+	  System.out.println("EMployee age is:-"+age);
+	  System.out.println("Employee Income is "+income);
+  }
+  
+}
+
+
+
+	public static void main(String[] args) {
+		Task1 task1=new Task1();
+		  task1.accept();
+		  task1.display();
+		  task1.checkAge();
+		  task1.checkIncome();
+	
+
+}
+
+
+=========================================================================================================
+Assignment 2
+package AssignmentsDay1;
+import java.util.*;
+public class Task2 {
+	private String name;
+	  private int s1,s2,s3;
+	  private float average;
+	  private int total;
+	  
+	  Scanner sc=new Scanner(System.in);
+	  public void accept() {
+			System.out.println("Enter the student name:- ");
+			name=sc.next();
+			System.out.println("Enter  subjects 1 marks:- ");
+			s1=sc.nextInt();
+			System.out.println("Enter  subjects 2 marks:-");
+			s2=sc.nextInt();
+			System.out.println("Enter  subjects 3 marks:-");
+			s3=sc.nextInt();
+			
+			total=s1+s2+s3;
+			average=total/3;
+		}   
+	  public void checkAvg() {
+		  if (average>=60 && s1>=40 && s2>=40 && s3>=40) {
+			  System.out.println(" passed");
+		  }else
+			  System.out.println(" failed");
+	  }
+	 
+		  
+	  
+	  public void display() {
+		  System.out.println("Studentname is:-"+name);
+		  System.out.println("Total of three subjests is:-"+total);
+		  System.out.println("Average is "+average);
+	  }
+}
+
+
+
+	public static void main(String[] args) {
+		Task2 task2=new Task2();
+		  task2.accept();
+		  task2.display();
+		  task2.checkAvg();
+		  
+	
+
+}
+
+=========================================================================================================
+Assignment 3
+package AssignmentsDay1;
+import java.util.*;
+public class Task3 {
+	private String pName;
+	  private boolean id;
+	  private boolean acard;
+	  private boolean admin;
+	  
+	  
+	  Scanner sc=new Scanner(System.in);
+	  public void accept() {
+			System.out.println("Enter the person name:- ");
+			pName=sc.next();
+			System.out.println("doy you have id:- (enter value in true/false)");
+			id=sc.nextBoolean();
+			System.out.println("do you have  access card (enter value in true/false):-");
+			acard=sc.nextBoolean();
+			System.out.println("Are you admin");
+			admin=sc.nextBoolean();
+			
+	  }  
+	  public void checkId() {
+		  if (id && acard || admin) {
+			  System.out.println("Access granted");
+		  }else
+			  System.out.println("Access denied");
+	  }
+}
+
+
+	public static void main(String[] args) {
+		Task3 task3=new Task3();
+		  task3.accept();
+		  task3.checkId();
+		
+		  
+	
+
+}
+
+=========================================================================================================
+Assignment 4
+package assignmentsDay1;
+import java.util.*;
+public class task4 {
+   private String name;
+   private int age;
+   private boolean citizen;
+   
+   Scanner sc=new Scanner(System.in);
+   public void accept() {
+   System.out.println("ENter the name of the voter");
+   name=sc.next();
+   System.out.println("Enter age of the citizen::"+age);
+   age=sc.nextInt();
+   System.out.println("Enter weather the voter is citizen or not (enter values in true or false)  ");
+   citizen=sc.nextBoolean();
+   }
+   
+   public void checkAge() {
+	   if (age>=18 && citizen)
+		   System.out.println(name+"The is eligible to vote");
+	   else 
+		   System.out.println(name+"The is not eligible to vote");
+   }
+  
+   }
+
+
+	public static void main(String[] args) {
+		task4 task4=new task4();
+		  task4.accept();
+		  task4.checkAge();
+		  
+		
+		  
+
+	
+
+}
+=========================================================================================================
+Assignment 5
+package assignmentsDay1;
+
+import java.util.Scanner;
+
+public class Task5 {
+	private String name;
+	   private boolean degree;
+	   private boolean criminalRec;
+	   
+	   Scanner sc=new Scanner(System.in);
+	   public void accept() {
+	   System.out.println("Enter the name of the applicant");
+	   name=sc.next();
+	   System.out.println("Enter weather the applicant has bachlors degree or similar qualifications (enter values in true/false) ::");
+	   degree=sc.nextBoolean();
+	   System.out.println("Enter weather the applicant has clean criminal record or not (enter values in true/false)  ");
+	   criminalRec=sc.nextBoolean();
+	   }
+	   
+	   public void checkRequirements() {
+		   if (degree && criminalRec)
+			   System.out.println(name+" is eligible for the job");
+		   else 
+			   System.out.println(name+" is not eligible for job");
+	   }
+}
+
+
+public static void main(String[]args) {
+	Task5 task5=new Task5();
+	
+	      task5.accept();
+	      task5.checkRequirements();
+}
+	}
+
+=========================================================================================================
+Assignment 6 
+
+package practical;
+import java.util.Scanner;
+public class Number {
+
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter the number");
+		num= sc.nextInt();
+		if(!(num>10 && num<20))
+		{
+			System.out.println("the number is not in between 10 and 20");
+		}
+		else {
+			System.out.println("the number is in between 10 and 20");
+		}
+
+	}
+
+}
+=========================================================================================================
+Assignments 7
+
+package practical;
+import java.util.Scanner;
+public class Weather {
+	private float Temperature;
+	private String weatherconditions;
+	Scanner sc = new Scanner(System.in);
+	public void accepteinfo()
+	{
+		System.out.println("enter the Temperature");
+		Temperature = sc.nextFloat();
+		System.out.println("enter the weatherconditions");
+		weatherconditions=sc.next();
+	}
+	
+	public void checkcondition()
+	{
+		if(Temperature>20 && Temperature<30 && weatherconditions!="raining")
+		{
+			System.out.println("conditions to go outside");
+		}
+		else {
+			System.out.println("conditions is not go outside");
+		}
+		
+			
+		
+	}
+public static void main(String[] args) {
+	
+	Weather w = new Weather();
+	w.accepteinfo();
+	w.checkcondition();
+	
+}
+}
+=========================================================================================================
+Assignment 8
+
+package practical;
+import java.util.Scanner;
+public class GreatestNumber {
+private int num1;
+private int num2;
+private int num3;
+Scanner sc = new Scanner(System.in);
+public void accepteinfo()
+{
+	System.out.println("enter the num1");
+	num1 = sc.nextInt();
+	System.out.println("enter the num2");
+	num2=sc.nextInt();
+	System.out.println("enter the num3");
+	num3 = sc.nextInt();
+}
+
+public void findlargenumber()
+{
+	if(num1>num2 && num1>num3)
+	{
+		System.out.println("The first number is greater" + num1);
+	}
+	else if(num2>num1 && num2>num3)
+	{
+		System.out.println("The second number is greater" + num2);
+	}
+	else {
+		System.out.println("The Third number is greater" + num3);
+	}
+	
+}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		GreatestNumber g =new GreatestNumber();
+		g.accepteinfo();
+		g.findlargenumber();
+		
+
+	}
+
+}
+
